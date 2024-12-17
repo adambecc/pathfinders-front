@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="btn-container">
+            <button id="signbtn"><a href="sign.html">
+                Sign Up / Log In
+            </a></button>
+        </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="pngtree-adventure-men-logo-vector-png-image_6733821.png" alt="Pathfinders Logo">
+            </a>
+        </div>
+        <h1>Pathfinders</h1>
+        <!-- Profile Picture Section -->
+        <div class="profile-picture">
+            <a href="myprofile.html">
+                <img src="image.jpg" class="profile-img">
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="my-hikes.html">My Hikes</a></li>
+                <li><a href="all-hikes.html">All Hikes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="myprofile.html">My Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <section class="profile-section">
+            <h2>My Profile</h2>
+            
+            <!-- Profile Picture Section -->
+            <div class="profile-picture">
+                <img src="profile-picture.jpg" alt="Profile Picture" class="profile-img">
+            </div>
+
+            <!-- Username Section -->
+            <div class="username">
+                <label for="usernameInput">Username:</label>
+                <input type="text" id="usernameInput" value="@adambecc">
+            </div>
+
+            <!-- Name Section -->
+            <div class="name">
+                <label for="nameInput">Name:</label>
+                <input type="text" id="nameInput" value="Adam Ben Chacha">
+            </div>
+
+            <!-- Biography Section -->
+            <div class="biography">
+                <label for="bioInput">Biography:</label>
+                <textarea id="bioInput" rows="4">I am an outdoor enthusiast and technology lover. I enjoy hiking and exploring new trails while also developing web applications.</textarea>
+            </div>
+
+            <!-- Save Button -->
+            <button id="saveChanges">Save Changes</button>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('saveChanges').addEventListener('click', function() {
+            // Retrieve updated values
+            const updatedUsername = document.getElementById('usernameInput').value;
+            const updatedName = document.getElementById('nameInput').value;
+            const updatedBio = document.getElementById('bioInput').value;
+
+            // Apply changes (can also update a backend or local storage here)
+            alert('Profile updated!\n\nUsername: ' + updatedUsername + '\nName: ' + updatedName + '\nBio: ' + updatedBio);
+        });
+    </script>
+</body>
+</html>

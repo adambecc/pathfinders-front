@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="btn-container">
+            <button id="signbtn"><a href="sign.html">Sign Up / Log In</a></button>
+        </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="pngtree-adventure-men-logo-vector-png-image_6733821.png" alt="Pathfinders Logo">
+            </a>
+        </div>
+        <h1>Pathfinders</h1>
+        <div class="profile-picture">
+            <a href="myprofile.html">
+                <img src="image.jpg" class="profile-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="my-hikes.html">My Hikes</a></li>
+                <li><a href="all-hikes.html">All Hikes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="myprofile.html">My Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>Gallery</h2>
+        <p>Browse through images from hiking adventures.</p>
+
+        <!-- Button to open the form -->
+        <button id="postPictureBtn">Post Picture</button>
+
+        <!-- Form initially hidden -->
+        <form id="hikeForm" style="display: none;">
+            <input type="text" id="hikeTitle" placeholder="Hike Title" required>
+            <textarea id="description" placeholder="Description" required></textarea>
+            <input type="text" id="location" placeholder="Location" required>
+            <input type="date" id="date" required>
+            
+            <!-- Image Upload Field -->
+            <input type="file" id="imageUpload" accept="image/*">
+            <div id="imagePreview"></div> <!-- To show image preview -->
+
+            <button type="submit" id="openFormButton">Post Picture</button>
+        </form>
+
+        <!-- Container to show the posts after form submission -->
+        <div id="hikesContainer">
+            <!-- Hike posts will appear here -->
+        </div>
+    </main>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

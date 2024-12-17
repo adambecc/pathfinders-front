@@ -1,0 +1,567 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+header {
+    background-color: #004d40;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
+
+h1 {
+    margin: 10px 0 0;
+    font-size: 24px;
+}
+
+.profile-picture {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+    z-index: 10;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the <a> links as buttons */
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Button text color */
+    background-color: #004d40; /* Button background color */
+    padding: 10px 20px; /* Add space inside the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the edges of the button */
+    font-size: 16px; /* Text size */
+    font-weight: bold; /* Bold text */
+    display: inline-block; /* Make the <a> behave like a button */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover animation */
+}
+
+/* Add hover effect for buttons */
+nav ul li a:hover {
+    background-color: #00796b; /* Change button background on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Remove default list styles and center the buttons */
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation buttons */
+    gap: 15px; /* Add space between buttons */
+}
+
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+#formContainer {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.hike-post {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.hike-post button {
+    margin-top: 10px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover animation */
+}
+
+.hike-post button:hover {
+    background-color: #00796b; /* Change button background on hover */
+    transform: scale(1.05);
+}
+
+.comments-section {
+    margin-top: 15px;
+}
+
+.comment-input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.comment-button {
+    margin-top: 5px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover animation */
+
+}
+
+.comment-button:hover {
+    background-color: #00796b; /* Change button background on hover */
+    transform: scale(1.05);
+}
+
+.hike-post {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.hike-post button {
+    margin-top: 10px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover animation */
+}
+
+.hike-post button:hover {
+    background-color: #00796b; /* Change button background on hover */
+    transform: scale(1.05);
+}
+
+.comments-section {
+    margin-top: 15px;
+}
+
+.comment-input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.comment-button {
+    margin-top: 5px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover animation */
+}
+
+.comment-button:hover {
+    background-color: #00796b; /* Change button background on hover */
+    transform: scale(1.05);
+}
+
+#openFormButton {
+    margin-top: 50px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #004d40;
+    color: white;
+    height: 40px;
+    width: 120px;
+    font-weight: bolder;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover animation */
+}
+
+#openFormButton:hover {
+    background-color: #00796b; /* Change button background on hover */
+    transform: scale(1.05);
+}
+
+.container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* Existing styles (no changes) */
+
+/* Pinterest-style Grid */
+.hike-post {
+    display: inline-block;
+    width: calc(33.333% - 20px); /* Three items per row */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.hike-post:hover .post-image {
+    transform: scale(1.05);
+}
+
+.hike-post button {
+    margin-top: 10px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hike-post button:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+}
+
+.comments-section {
+    margin-top: 15px;
+}
+
+.comment-input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.comment-button {
+    margin-top: 5px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.comment-button:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+}
+
+/* Grid Layout Styling for Hikes */
+#hikesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-text {
+    display: inline-block;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+.hidden {
+    display: none;
+}
+
+#formContainer {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .hike-post {
+        width: calc(50% - 20px); /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hike-post {
+        width: 100%; /* One item per row on small screens */
+    }
+}
+
+
+#postPictureBtn {
+    margin-top: 50px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #004d40;
+    color: white;
+    height: 40px;
+    width: 120px;
+    font-weight: bolder;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover animation */
+}
+
+#postPictureBtn:hover {
+    background-color: #00796b; /* Change button background on hover */
+    transform: scale(1.05);
+}
+
+/* Grid Layout Styling for Hikes */
+#hikesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.hike-post {
+    display: inline-block;
+    width: calc(33.333% - 20px); /* Three items per row */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.hike-post:hover .post-image {
+    transform: scale(1.05);
+}
+
+.hike-post button {
+    margin-top: 10px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hike-post button:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+}
+
+/* Grid Layout Responsiveness */
+@media (max-width: 768px) {
+    .hike-post {
+        width: calc(50% - 20px); /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hike-post {
+        width: 100%; /* One item per row on small screens */
+    }
+}
+
+/* Pinterest-style Grid */
+#hikesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hike-post {
+    display: inline-block;
+    width: calc(33.333% - 20px); /* Three items per row */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.hike-post:hover .post-image {
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+.join-btn {
+    margin-top: 10px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.join-btn:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+}
+
+.join-btn:disabled {
+    background-color: #b2dfdb;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+#signbtn {
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#signbtn:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+}
+
+.btn-container {
+    display: flex;
+    left: 0;
+}
+
+.like-section {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.like-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.like-btn:hover {
+    background-color: #e63939;
+}
+
+.like-count {
+    font-size: 14px;
+    color: #333;
+}
+
+.hike-post {
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hike-post img {
+    margin-top: 10px;
+    border-radius: 5px;
+}
