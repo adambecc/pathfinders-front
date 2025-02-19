@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hikes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="btn-container">
+            <button id="signbtn"><a href="sign.html">
+                Sign Up / Log In
+            </a></button>
+        </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="pngtree-adventure-men-logo-vector-png-image_6733821.png" alt="Pathfinders Logo">
+            </a>
+        </div>
+        <h1>Pathfinders</h1>
+        <div class="profile-picture">
+            <a href="myprofile.html">
+                <img src="image.jpg" class="profile-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="my-hikes.html">My Hikes</a></li>
+                <li><a href="all-hikes.html">All Hikes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="myprofile.html">My Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <button id="openFormButton">Post New Hike</button>
+        <div id="formContainer" class="hidden">
+            <h3>Create a New Hike</h3>
+            <form id="hikeForm">
+                <label for="hikeTitle">Hike Title:</label>
+                <input type="text" id="hikeTitle" placeholder="Enter hike title" required>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" placeholder="Describe the hike..." required></textarea>
+                
+                <label for="location">Location:</label>
+                <input type="text" id="location" placeholder="Enter location" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+                
+                <button type="submit">Post</button>
+                <button type="button" id="cancelFormButton">Cancel</button>
+            </form>
+        </div>
+        <section id="hikesContainer">
+            <h3>My Hike Posts</h3>
+        </section>
+    </main>
+    <script src="myhikes.js"></script>
+</body>
+</html>
